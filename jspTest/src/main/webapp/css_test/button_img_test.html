@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+    <!--
+      input {
+        vertical-align: middle;
+      }
+      input.form-text {
+        border: 1px solid #bcbcbc;
+        height: 28px;
+      }
+      input.img-button {
+        background: url( "/jspTest/img/search.png" ) no-repeat;
+        border: none;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+      -->
+      
+      .btnArea button{
+		 width:17px;  /* 이미지의 넓이*/
+		 height: 16px; /* 이미지의 높이*/
+		 border: 0; /*버튼은 기본으로 border값이 있으므로 0으로 만들어 줌*/
+		 padding: 0;
+		 overflow:hidden; /*위치를 넘어선 것은 안보이도록 설정*/
+		 position: relative;
+	   }
+		.btnArea span{
+		 width:17px;
+		 height: 16px;
+		 position: absolute;
+		 top:0px;
+		 left:0px;
+	   }
+		.button_img{ 
+		 background: url(/jspTest/img/cart_delete.jpg) no-repeat;
+	   }  
+    </style>
+  </head>
+  <body>
+    <form>
+    
+        <input type="text" class="form-text">
+        <div class="btnArea">
+       	 <button type="button" class="delete_button"><span class="button_img"></span></button>
+      	</div>
+    
+    </form>
+  </body>
+</html>
