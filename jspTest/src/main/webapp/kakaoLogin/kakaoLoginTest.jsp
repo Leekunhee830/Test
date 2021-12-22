@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<a href="https://kauth.kakao.com/oauth/authorize?client_id=&redirect_uri=http://localhost:8002/jspTest/kakao.do&response_type=code">로그인</a>
+		<a href="https://kauth.kakao.com/oauth/authorize?client_id=아이디&redirect_uri=http://localhost:8002/jspTest/kakao.do&response_type=code">로그인</a>
 </body>
 </html>

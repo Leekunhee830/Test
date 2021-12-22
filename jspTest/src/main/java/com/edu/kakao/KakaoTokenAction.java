@@ -9,9 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.edu.dto.KakaoDto;
+import com.edu.dto.KakaoUser;
 import com.edu.util.Action;
 import com.edu.util.ActionForward;
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 
 
@@ -38,7 +42,15 @@ public class KakaoTokenAction implements Action{
 		
 		Gson gson=new Gson();
 		
+		JsonParser parser=new JsonParser();
+		JsonElement element=parser.parse(sb.toString());
 		
+		int id=element.getAsJsonObject().get("id").getAsInt();
+		JsonObject properites=element.getAsJsonObject().get("properties").getAsJsonObject();
+		KakaoUser kakaoUser=gson.fromJson(properites, KakaoUser.class);
+		kakaoUser.setId(id);
+		
+		System.out.println("kakao:"+kakaoUser);
 		
 		return null;
 	}

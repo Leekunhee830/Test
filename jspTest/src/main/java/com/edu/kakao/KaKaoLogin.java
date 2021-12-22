@@ -22,7 +22,7 @@ public class KaKaoLogin implements Action{
 		
 		String authorize_code=request.getParameter("code");
 		//System.out.println("code:"+code);
-		String client_id="";
+		String client_id="¾ÆÀÌµð";
 		String redirect_uri="http://localhost:8002/jspTest/kakao.do";
 		String code=authorize_code;
 		
